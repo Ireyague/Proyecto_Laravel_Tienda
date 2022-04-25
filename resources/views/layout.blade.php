@@ -12,7 +12,7 @@
 <header>
 
      <img class="h-14" src="{{asset("images/logo.png")}}" alt="logo" >
-    <h1 class="text-5xl">TIENDA DE VIDEOJUEGOS</h1>
+    <h1 class="text-4xl w-auto p-4">TIENDA DE VIDEOJUEGOS</h1>
         <div class="logueo">
             @auth
                 {{auth()->user()->name}}
@@ -22,20 +22,29 @@
 
                 </form>
             @endauth
+        </div>
+    <div class="registro">
             @guest
                 <form action="{{route('login')}}" method="post">
                     @csrf
-                    <x-input name="email" placeholder="email"></x-input>
-                    <x-input name="password" placeholder="password"></x-input>
+
+                    <x-input class="h-1" name="email" type="text" placeholder="email"></x-input>
+                <br/>
+                    <x-input class="h-1" name="password" type="password" placeholder="password"></x-input>
                     <br/>
-                    <x-button>Login</x-button>
-                    <x-button>Registrar</x-button>
+                    <x-button class="p-2"> Login</x-button>
+                    <x-ancla ref="{{route('register')}}">Registrar</x-ancla>
+
+                    {{--<x-button>Login</x-button>
+                    <x-ancla ref="{{route('register')}}">Registrar</x-ancla>--}}
                                     </form>
                {{-- <x-ancla ref="{{route('login')}}">Login</x-ancla>
                 <x-ancla ref="{{route('register')}}">Registrar</x-ancla>--}}
-
+                @if ($errors->any())
+                    <h2>Login incorrecto</h2>
+                @endif
     @endguest
-        </div>
+    </div>
 </header>
 
 <nav>
@@ -112,7 +121,7 @@
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2022 Copyright:
-            <a class="text-reset fw-bold" href="">Github proyecto Laravel Irene</a>
+            <a class="text-reset fw-bold" href="https://github.com/Ireyague/Proyecto_Laravel_Tienda">Github proyecto Laravel Irene</a>
         </div>
         <!-- Copyright -->
 

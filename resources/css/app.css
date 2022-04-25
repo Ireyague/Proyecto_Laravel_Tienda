@@ -3,7 +3,10 @@
 @import 'tailwindcss/utilities';
 
 header {
-    @apply h-15v flex flex-row mx-10 p-6 bg-gray-400 justify-between
+    @apply h-15v flex flex-row mx-10 p-2 bg-gray-400 justify-between w-auto
+}
+header.div{
+    @apply flex flex-row
 }
 
 nav{
