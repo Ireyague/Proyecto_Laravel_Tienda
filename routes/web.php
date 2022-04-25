@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductoController;
 
 Route::get('/', function () {
     return view('tienda');
-});
+})->name('principal');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

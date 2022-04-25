@@ -1,7 +1,7 @@
 @extends("layout")
 @section("menu")
 {{--<x-ancla ref="{{route('productos.create')}}">Nuevo producto</x-ancla>--}}
-{{--<x-ancla ref="{{route('tienda')}}">Volver</x-ancla>--}}
+<x-ancla ref="{{route('principal')}}">Volver</x-ancla>
 @endsection
 @section("contenido")
     <table>

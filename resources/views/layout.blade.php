@@ -49,20 +49,20 @@
 
 <nav>
 
-    <ul>
+   {{-- <ul>
 
         <li class="font-bold"><a href="productos">PRODUCTOS</a></li>
 
 
 
 
-    </ul>
+    </ul>--}}
     @yield("menu")
 </nav>
-<main>
+<main class="overflow-auto">
     @yield("contenido")
-    <h1>Main</h1>
-</main>
+
+</main >
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
